@@ -1,0 +1,66 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+}
+
+.square {
+  display: flex;                  
+  align-items: center;          
+  justify-content: center;       
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: #fff;
+  border: 3px solid #444;
+  transition: background 0.2s;
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}
+
+.winner-line {
+  border: 3px solid green;
+}
+
+.right-panel {
+  min-width: 200px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.square svg {
+  transform: scale(0.8);
+  opacity: 0;
+  animation: pop 0.3s ease forwards;
+}
+
+@keyframes pop {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
