@@ -6,7 +6,7 @@
     <p v-else-if="game.winner === 'Ничья'">🤝 Ничья!</p>
     <p v-else>Ходит: {{ game.currentPlayer }}</p>
 
-    <button @click="game.resetGame()">Сбросить игру</button>
+    <button @click="game.resetGame()">Новый матч</button>
 
     <h3>📊 Статистика:</h3>
     <ul>
@@ -15,12 +15,12 @@
       <li>Ничья: {{ game.stats.draws }}</li>
     </ul>
 
-    <!-- Отдельная кнопка сброса статистики и игры -->
+   
     <button
       @click="clearAll"
       class="clear-btn"
     >
-      Очистить статистику и сбросить игру
+      Начать заново
     </button>
   </div>
 </template>
