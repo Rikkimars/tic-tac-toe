@@ -37,9 +37,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.winner-line {
-  border: 3px solid green;
-}
+
 
 .right-panel {
   min-width: 200px;
@@ -80,4 +78,46 @@ button {
 
 .clear-btn:hover {
   background-color: #d32f2f;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px green;
+  }
+  50% {
+    box-shadow: 0 0 15px green;
+  }
+  100% {
+    box-shadow: 0 0 0px green;
+  }
+}
+
+.winner-line {
+  border: 3px solid green;
+  animation: glow 1.5s infinite;
+  z-index: 1;
+}
+
+:root {
+  --background-color: #f3f3f3;
+  --text-color: #000;
+  --square-bg: #fff;
+  --square-border: #444;
+}
+
+[data-theme="dark"] {
+  --background-color: #1e1e1e;
+  --text-color: #f3f3f3;
+  --square-bg: #2b2b2b;
+  --square-border: #888;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.square {
+  background: var(--square-bg);
+  border: 3px solid var(--square-border);
 }
