@@ -37,9 +37,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.winner-line {
-  border: 3px solid green;
-}
+
 
 .right-panel {
   min-width: 200px;
@@ -80,4 +78,22 @@ button {
 
 .clear-btn:hover {
   background-color: #d32f2f;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 0px green;
+  }
+  50% {
+    box-shadow: 0 0 15px green;
+  }
+  100% {
+    box-shadow: 0 0 0px green;
+  }
+}
+
+.winner-line {
+  border: 3px solid green;
+  animation: glow 1.5s infinite;
+  z-index: 1;
 }
